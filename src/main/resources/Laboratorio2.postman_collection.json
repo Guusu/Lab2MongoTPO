@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "9b32ff95-0adb-4244-b878-242f3db2f57e",
+		"name": "Laboratorio2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET All Resto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/restaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST create Resto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n           \r\n            \"nombre\": \"Restaurante de la Luna\",\r\n            \"tipo_cocina\": \"Mediterránea\",\r\n            \"direccion\": {\r\n                \"calle\": \"Avenida Principal, 123\",\r\n                \"ciudad\": \"Ciudad del Sol\",\r\n                \"estado\": \"Estado Ejemplo\",\r\n                \"codigo_postal\": \"12345\"\r\n            },\r\n            \"telefono\": \"+1 234-567-8901\",\r\n            \"horario\": {\r\n                \"domingo\": \"Cerrado\",\r\n                \"miercoles\": \"10:00 AM - 8:00 PM\",\r\n                \"martes\": \"10:00 AM - 8:00 PM\",\r\n                \"jueves\": \"10:00 AM - 8:00 PM\",\r\n                \"sabado\": \"11:00 AM - 9:00 PM\",\r\n                \"lunes\": \"10:00 AM - 8:00 PM\",\r\n                \"viernes\": \"10:00 AM - 9:00 PM\"\r\n            },\r\n            \"menu\": [\r\n                {\r\n                    \"nombre_platillo\": \"Paella de Mariscos\",\r\n                    \"precio\": 20.99,\r\n                    \"descripcion\": \"Deliciosa paella con una mezcla de mariscos frescos.\"\r\n                },\r\n                {\r\n                    \"nombre_platillo\": \"Pizza Margherita\",\r\n                    \"precio\": 12.99,\r\n                    \"descripcion\": \"Pizza clásica con tomate, mozzarella y albahaca.\"\r\n                },\r\n                {\r\n                    \"nombre_platillo\": \"Tiramisú\",\r\n                    \"precio\": 6.99,\r\n                    \"descripcion\": \"Postre italiano con café y mascarpone.\"\r\n                }\r\n            ],\r\n            \"capacidad_comensales\": 60,\r\n            \"calificacion\": 4.5\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/restaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST create Resto Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"653ed5a3f15d08572abbcffb\",\r\n    \"nombre\": \"Restaurante de la Luna\",\r\n    \"tipo_cocina\": \"Mediterránea\",\r\n    \"direccion\": {\r\n        \"calle\": \"Avenida Principal, 123\",\r\n        \"ciudad\": \"Ciudad del Sol\",\r\n        \"estado\": \"Estado Ejemplo\",\r\n        \"codigo_postal\": \"12345\"\r\n    },\r\n    \"telefono\": \"+1 234-567-8901\",\r\n    \"horario\": {\r\n        \"domingo\": \"Cerrado\",\r\n        \"miercoles\": \"10:00 AM - 8:00 PM\",\r\n        \"martes\": \"10:00 AM - 8:00 PM\",\r\n        \"jueves\": \"10:00 AM - 8:00 PM\",\r\n        \"sabado\": \"11:00 AM - 9:00 PM\",\r\n        \"lunes\": \"10:00 AM - 8:00 PM\"\r\n    },\r\n    \"menu\": [\r\n        {\r\n            \"nombre_platillo\": \"Paella de Mariscos\",\r\n            \"precio\": 20.99,\r\n            \"descripcion\": \"Deliciosa paella con una mezcla de mariscos frescos.\"\r\n        },\r\n        {\r\n            \"nombre_platillo\": \"Pizza Margherita\",\r\n            \"precio\": 12.99,\r\n            \"descripcion\": \"Pizza clásica con tomate, mozzarella y albahaca.\"\r\n        },\r\n        {\r\n            \"nombre_platillo\": \"Tiramisú\",\r\n            \"precio\": 6.99,\r\n            \"descripcion\": \"Postre italiano con café y mascarpone.\"\r\n        }\r\n    ],\r\n    \"capacidad_comensales\": 60,\r\n    \"calificacion\": 4.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/restaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"restaurant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
