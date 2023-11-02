@@ -8,6 +8,7 @@ import com.up.lab.tpo.repository.RestoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -45,5 +46,16 @@ public class RestoServiceImpl implements RestoService {
         repository.save(restoToUpdate);
 
         return request;
+    }
+
+    @Override
+    public RestaurantsListResponse getOneResto(String id) {
+        RestaurantsListResponse response = new RestaurantsListResponse();
+
+        List<RestaurantDTO> restaurants = restoMapper.restoModelListToDTO(Collections.singletonList(repository.findById(id).orElse(null)));
+
+        response.setRestaurants(restaurants);
+
+        return response;
     }
 }

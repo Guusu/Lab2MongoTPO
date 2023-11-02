@@ -7,4 +7,6 @@ public interface RestoService {
      RestaurantsListResponse getAllRestos ();
      RestaurantDTO createRestaurant (RestaurantDTO request);
      RestaurantDTO updateRestaurant (RestaurantDTO request);
+
+     RestaurantsListResponse getOneResto(String id);
 }

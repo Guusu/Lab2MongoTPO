@@ -24,6 +24,14 @@ public class RestoController {
         return ResponseEntity.ok(response);
 
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<RestaurantsListResponse> getAllRestaurants(@PathVariable(name = "id") String id){
+
+        RestaurantsListResponse response = restoService.getOneResto(id);
+
+        return ResponseEntity.ok(response);
+
+    }
     @PostMapping()
     public ResponseEntity<RestaurantDTO> createRestaurant(@RequestBody RestaurantDTO request){
 
